@@ -1,0 +1,13 @@
+import random
+
+def play():
+    # user chooses stuff from list
+    options = ['rock', 'paper', 'scissors'] # list is rock or paper or scissors
+    
+    print("Welcome to the Ultimate Rock, Paper, Scissors.") # splash text
+    print("Choose your move or fail: ")
+
+    # get user's choice, convert it to lowercase to handle case-insensitive input
+    choicey = input("You choose: ").lower()
+    
+    
