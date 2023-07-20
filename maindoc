@@ -10,4 +10,15 @@ def play():
     # get user's choice, convert it to lowercase to handle case-insensitive input
     choicey = input("You choose: ").lower()
     
+
+    # add way to validate input and create error here
+
+    # print the user choice here, maybe provide instructions. We'll see lol
+
+    # use random to calculate outcome here
+
+    # maybe option to play again here
+
+    # run statement
+    play()
     
