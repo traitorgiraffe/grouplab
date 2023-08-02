@@ -1,24 +1,38 @@
 import random
 
-def play():
-    # user chooses stuff from list
-    options = ['rock', 'paper', 'scissors'] # list is rock or paper or scissors
-    
-    print("Welcome to the Ultimate Rock, Paper, Scissors.") # splash text
-    print("Choose your move or fail: ")
+# list stuff
+options = ["rock", "paper", "scissors"]
 
-    # get user's choice, convert it to lowercase to handle case-insensitive input
-    choicey = input("You choose: ").lower()
-    
+# make dictionary
+rules = {"rock": "scissors", "scissors": "paper", "paper": "rock"}
 
-    # add way to validate input and create error here
+# this will choose a random option from your list for the computer
+computerOption = random.choice(options)
 
-    # print the user choice here, maybe provide instructions. We'll see lol
+# start game
+print("Welcome to the game of Rock, Paper, Scissors!")
+print("Enter your choice (rock, paper or scissors): ")
 
-    # use random to calculate outcome here
+# getting the user's choice
+userHippo = input().lower()
 
-    # maybe option to play again here
+# validate user's input
+while userHippo not in options:
+    print("You have to choose rock, paper or scissors.")
+    userHippo = input().lower()
 
-    # run statement
-    play()
-    
+# show choices
+print("You chose " + userHippo)
+print("Computer chose " + computerOption)
+
+# determine the winner
+if userHippo == computerOption:
+    print("Tie")
+elif rules[userHippo] == computerOption:
+    print("You win")
+else:
+    print("You lose.")
+
+# end 
+print("Come back again")
+
