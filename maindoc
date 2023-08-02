@@ -6,33 +6,39 @@ options = ["rock", "paper", "scissors"]
 # make dictionary
 rules = {"rock": "scissors", "scissors": "paper", "paper": "rock"}
 
-# this will choose a random option from your list for the computer
-computerOption = random.choice(options)
-
 # start game
-print("Welcome to the game of Rock, Paper, Scissors!")
-print("Enter your choice (rock, paper or scissors): ")
+print("GET READY TO PLAY SOME ROCK, PAPER SCISSORS!")
 
-# getting the user's choice
-userHippo = input().lower()
+while True:
+    # this will choose a random option from your list for the computer
+    computerOption = random.choice(options)
 
-# validate user's input
-while userHippo not in options:
-    print("You have to choose rock, paper or scissors.")
+    print("Enter your choice (rock, paper or scissors): ")
+
+    # getting the user's choice
     userHippo = input().lower()
 
-# show choices
-print("You chose " + userHippo)
-print("Computer chose " + computerOption)
+    # validate user's input
+    while userHippo not in options:
+        print("Choose rock, paper or scissors.")
+        userHippo = input().lower()
 
-# determine the winner
-if userHippo == computerOption:
-    print("Tie")
-elif rules[userHippo] == computerOption:
-    print("You win")
-else:
-    print("You lose.")
+    # show choices
+    print("You chose " + userHippo)
+    print("Lord Processor chose " + computerOption)
 
-# end 
-print("Come back again")
+    # determine the winner
+    if userHippo == computerOption:
+        print("Tie")
+    elif rules[userHippo] == computerOption:
+        print("You win")
+    else:
+        print("You lose.")
 
+    # play again prompt Y/N
+    play_again = input("play again? (yes/no): ").lower() # turn it lower case for ease
+
+    if play_again != "yes":
+        # leave 
+        print("Lord processor laughs at your cowardice")
+        break
