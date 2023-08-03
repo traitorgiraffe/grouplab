@@ -10,18 +10,18 @@ rules = {"rock": "scissors", "scissors": "paper", "paper": "rock"}
 print("GET READY TO PLAY SOME ROCK, PAPER SCISSORS!")
 
 while True:
-    # this will choose a random option from your list for the computer
-    computerOption = random.choice(options)
+    # choose random option from list
+    computerOption = random.choice(options) # call random
 
     print("Enter your choice (rock, paper or scissors): ")
 
     # getting the user's choice
-    userHippo = input().lower()
+    userHippo = input().lower() # turn it lowercase
 
     # validate user's input
     while userHippo not in options:
         print("Choose rock, paper or scissors.")
-        userHippo = input().lower()
+        userHippo = input().lower() # turn it lowercase
 
     # show choices
     print("You chose " + userHippo)
@@ -36,7 +36,7 @@ while True:
         print("You lose.")
 
     # play again prompt Y/N
-    play_again = input("play again? (yes/no): ").lower() # turn it lower case for ease
+    play_again = input("play again? (yes/no): ").lower() # turn it lower case
 
     if play_again != "yes":
         # leave 
